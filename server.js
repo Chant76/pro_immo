@@ -7,9 +7,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'pug');
 
+
 //const router = require(path.join(__dirname, 'app' , 'route.js'));
 const router = require('./app/route.js');
 router(app);
+
+
 
 app.listen(process.env.PORT_HTTP,() => { 
     if(process.env.APP_ENV == 'dev') {

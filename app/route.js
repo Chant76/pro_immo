@@ -6,7 +6,10 @@ module.exports = (app) =>{
     })
 
     app.get('/inscript', (request, response) => {
-        let HomeController = require('../src/controllers/HomeController.js')
+        let HomeController = require('../src/controllers/RegisterController.js')
         HomeController.inscript(request,response)
     })
+
+
+    
 };

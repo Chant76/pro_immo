@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "browser-refresh server.js",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration": "node ./data/make.js migration"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.3",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.1"
   }
 }
