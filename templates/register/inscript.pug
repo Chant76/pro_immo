@@ -1,30 +1,36 @@
 extends ../layout.pug 
 block content 
     .container 
-        <form action="" class="">
+        if error
+            .alert.alert-danger #{error}
+        <form action="/inscript" method ="post" class="">
             <div class="input-group flex-nowrap py-3">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="email" class="form-control" placeholder="Email" name="email" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="email" class="form-control" placeholder="Email" name="email" value= "email" aria-label="Username" id="email" aria-describedby="addon-wrapping">
             </div>
             <div class="input-group flex-nowrap py-3">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="password" class="form-control" placeholder="Mot de passe"  name="password"  aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="password" class="form-control" placeholder="Mot de passe"  name="password" id="password" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="input-group flex-nowrap py-3">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="text" class="form-control" placeholder="Monsieur" aria-label="Username" aria-describedby="addon-wrapping">
+                <select class="form-control" placeholder="Genre" name="civility" id="civility"  aria-label="Default select example">
+                    <option selected>Genre </option>
+                    <option value="1" selected="civility==1">Monsieur </option>
+                    <option value="2" selected="civility==2">Madame</option>
+                </select>
             </div>
             <div class="input-group flex-nowrap py-3">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Nom" name="firtstname" id="firstname" value= "firstname" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="input-group flex-nowrap py-3">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Prénom" name="lastname" id="lastname" value= "lastname"  aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div class="input-group flex-nowrap py-3">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Téléphone" name="phone" id="phone" value="phone" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <div>
                 <button type="submit" class="btn btn-primary">S'inscrire</button>

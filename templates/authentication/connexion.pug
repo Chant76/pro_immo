@@ -1,0 +1,21 @@
+extends ../layout.pug 
+block content 
+    .container
+        h1 Connexion
+        if error 
+            .alert.alert-danger #{error}
+        <form action="/connexion" method ="post">
+            <div class="input-group flex-nowrap py-3">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+                <input type="email" class="form-control" placeholder="Email" name="email" value="email" aria-label="Username" id="email" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap py-3">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+                <input type="password" class="form-control" placeholder="Mot de passe"  name="password" id="password" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Connecter</button>
+            </div>        
+        </form>
+            
